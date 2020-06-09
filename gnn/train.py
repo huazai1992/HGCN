@@ -61,7 +61,7 @@ elif 'imdb' in dataname:
 elif 'slap' in dataname:
     para['output_type'] = 'softmax'
     para['ispart'] = True
-    epochs = 6
+    epochs = 8
 elif 'cora' in dataname:
     para['output_type'] = 'softmax'
     para['ispart'] = True
@@ -89,6 +89,7 @@ for networks in rownetworks:
 
 
 for numi in range(int(iternum)):
+    tf.reset_default_graph()
     result.write("######################################\n")
     ######################################################################################
     # feed dicts and initalize session
