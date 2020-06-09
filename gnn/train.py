@@ -53,15 +53,19 @@ result.write('{}-{}-{}-{}'.format(kernel_size, inception_depth, label_propagatio
 if 'dblp' in dataname:
     para['output_type'] = 'softmax'
     para['ispart'] = True
+    epochs = 30
 elif 'imdb' in dataname:
     para['output_type'] = 'sigmoid'
     para['ismulit'] = True
+    epochs = 30
 elif 'slap' in dataname:
     para['output_type'] = 'softmax'
     para['ispart'] = True
+    epochs = 6
 elif 'cora' in dataname:
     para['output_type'] = 'softmax'
     para['ispart'] = True
+    epochs = 30
 
 rownetworks, truefeatures, truelabels, knownindex, rawlabels, truefeature = get_data_npz(dataname, HIN_info['edge_types'],
                                                                 HIN_info['node_types'], HIN_info['target_node'],
