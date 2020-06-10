@@ -39,7 +39,7 @@ isfull = False
 para={'algorithm':'HGCN', 'output_type':'softmax',   ##describe the experiment
        '_kernel_size':kernel_size,'_inception_depth':inception_depth,
       '_label_propagation':label_propagation, 'hiddennum':64,
-      'ispart':False, 'ismulit': False                      ##basic paramater
+      'ispart':False, 'ismulti': False                      ##basic paramater
      }
 
 train_ratio_map = {
@@ -56,7 +56,7 @@ if 'dblp' in dataname:
     epochs = 30
 elif 'imdb' in dataname:
     para['output_type'] = 'sigmoid'
-    para['ismulit'] = True
+    para['ismulti'] = True
     epochs = 30
 elif 'slap' in dataname:
     para['output_type'] = 'softmax'
@@ -69,7 +69,7 @@ elif 'cora' in dataname:
 
 rownetworks, truefeatures, truelabels, knownindex, rawlabels, truefeature = get_data_npz(dataname, HIN_info['edge_types'],
                                                                 HIN_info['node_types'], HIN_info['target_node'],
-                                                                            para['ispart'], para['ismulit'])
+                                                                            para['ispart'], para['ismulti'])
 samples, labelnums = truelabels.shape[0], truelabels.shape[1]
 iternum,perpass,iterica,Kholdoutvalidation=10,25,10,10
 inputdims = [feature.shape[1] for feature in truefeatures]
@@ -104,7 +104,7 @@ for numi in range(int(iternum)):
         else:
             trainindex=list(trainindex)
             testindex=list(testindex)
-        if len(list(set(rawlabels[trainindex]))) == labelnums or para['ismulit']:
+        if len(list(set(rawlabels[trainindex]))) == labelnums or para['ismulti']:
             start_sample = False
 
     testlabels = truelabels.copy()
