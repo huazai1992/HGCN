@@ -137,7 +137,7 @@ for numi in range(int(iternum)):
                       {Net[i]: allnetworks[i] for i in range(len(allnetworks))}.items() +
                       {features[i]: inputfeatures[i] for i in range(len(truefeatures))}.items() +
                       {adj_Net[i]: adjnetworks[i] for i in range(len(adjnetworks))}.items())
-    traindicts[features[target_index]][testindex] = 0
+    traindicts[features[target_index]][testindex] = 0.
 
 
     testdicts = {labels: testlabels, static_feature: truefeature, select_index: testindex, unchange_index: testindex+trainindex, K.learning_phase(): 0}
@@ -151,7 +151,7 @@ for numi in range(int(iternum)):
         # sess = tf.InteractiveSession(config=config)
         sess = tf.Session(config=config)
     else:
-        sess = tf.InteractiveSession()
+        sess = tf.Session()
     sess.run(tf.global_variables_initializer())
     #########################################################################################################
     print para
@@ -161,7 +161,7 @@ for numi in range(int(iternum)):
             _, train_loss = sess.run([train, loss], feed_dict=traindicts)
             print iter, train_loss
 
-        testdicts[features[target_index]][testindex] = 0
+        testdicts[features[target_index]][testindex] = 0.
         testlabels, embeddings = sess.run([y, embds], feed_dict=testdicts)
 
         ############################evaluate results################################################
