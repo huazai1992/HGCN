@@ -157,11 +157,6 @@ def get_data_npz(net, edge_types, node_types, target_node, ispart=True, ismulti=
     if ispart and not use_semantic_feature:
         labels = labels[:, 1:]
 
-    if 'slap' in net or 'cora' in net:
-        have_embeddings_ids = np.loadtxt(path + 'heer_exist.txt', delimiter=' ', dtype=np.int)
-        have_embeddings_ids = list(have_embeddings_ids)
-        knownindex = list(set(knownindex).intersection(have_embeddings_ids))
-
     return rawnetworks, features, labels, knownindex, rawlabels_all, truefeature
 
 

@@ -10,7 +10,7 @@ from model import *
 from metrics import *
 
 parser = argparse.ArgumentParser(description="your script description")
-parser.add_argument('--dataset', type=str, help='dataset name', default='cora')
+parser.add_argument('--dataset', type=str, help='dataset name', default='slap')
 parser.add_argument('--kernel-size', type=int, help='kernel size', default=2)
 parser.add_argument('--inception-depth', type=int, help='number of inception layers', default=4)
 parser.add_argument('--label-propagation', type=int, help='number of label propagation layers', default=0)
