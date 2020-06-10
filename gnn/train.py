@@ -10,9 +10,9 @@ from model import *
 from metrics import *
 
 parser = argparse.ArgumentParser(description="your script description")
-parser.add_argument('--dataset', type=str, help='dataset name', default='slap')
-parser.add_argument('--kernel-size', type=int, help='kernel size', default=2)
-parser.add_argument('--inception-depth', type=int, help='number of inception layers', default=4)
+parser.add_argument('--dataset', type=str, help='dataset name', default='cora')
+parser.add_argument('--kernel-size', type=int, help='kernel size', default=4)
+parser.add_argument('--inception-depth', type=int, help='number of inception layers', default=2)
 parser.add_argument('--label-propagation', type=int, help='number of label propagation layers', default=0)
 parser.add_argument('--epochs', type=int, help='number of epochs', default=30)
 parser.add_argument('--train-ratio', type=float, help='training ratio', default=0.8)
@@ -104,7 +104,7 @@ for numi in range(int(iternum)):
         else:
             trainindex=list(trainindex)
             testindex=list(testindex)
-        if len(list(set(rawlabels[trainindex]))) == labelnums or para['ismulit']:
+        if (len(list(set(rawlabels[trainindex]))) == labelnums and len(list(set(rawlabels[testindex]))) == labelnums) or para['ismulit']:
             start_sample = False
 
     testlabels = truelabels.copy()
