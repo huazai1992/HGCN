@@ -104,7 +104,7 @@ for numi in range(int(iternum)):
         else:
             trainindex=list(trainindex)
             testindex=list(testindex)
-        if (len(list(set(rawlabels[trainindex]))) == labelnums and len(list(set(rawlabels[testindex]))) == labelnums) or para['ismulit']:
+        if len(list(set(rawlabels[trainindex]))) == labelnums or para['ismulit']:
             start_sample = False
 
     testlabels = truelabels.copy()
