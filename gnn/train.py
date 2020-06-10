@@ -94,18 +94,24 @@ for numi in range(int(iternum)):
     result.write("######################################\n")
     ######################################################################################
     # feed dicts and initalize session
-    start_sample = True
-    while start_sample:
-        index = np.random.randint(0, Kholdoutvalidation, (samples, 1)) > train_ratio_map[train_ratio]
-        trainindex, testindex = np.where(index == True)[0], np.where(index == False)[0]
-        if para['ispart']:
-            trainindex=list(set(knownindex).intersection(trainindex))
-            testindex=list(set(knownindex).intersection(testindex))
-        else:
-            trainindex=list(trainindex)
-            testindex=list(testindex)
-        if len(list(set(rawlabels[trainindex]))) == labelnums or para['ismulti']:
-            start_sample = False
+    # start_sample = True
+    # while start_sample:
+    index = np.random.randint(0, Kholdoutvalidation, (samples, 1)) > train_ratio_map[train_ratio]
+    trainindex, testindex = np.where(index == True)[0], np.where(index == False)[0]
+    if para['ispart']:
+        trainindex=list(set(knownindex).intersection(trainindex))
+        testindex=list(set(knownindex).intersection(testindex))
+    else:
+        trainindex=list(trainindex)
+        testindex=list(testindex)
+        # if len(list(set(rawlabels[trainindex]))) == labelnums or para['ismulti']:
+        #     start_sample = False
+    with open("../data/net_%s/train.%d.idx" % (dataname, numi), 'w') as f_out:
+        for i in trainindex:
+            f_out.write('{}\n'.format(i))
+    with open("../data/net_%s/test.%d.idx" % (dataname, numi), 'w') as f_out:
+        for i in testindex:
+            f_out.write('{}\n'.format(i))
 
     testlabels = truelabels.copy()
     inputfeatures = truefeatures.copy()
