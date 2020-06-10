@@ -91,7 +91,7 @@ for networks in rownetworks:
 
 for numi in range(int(iternum)):
     tf.reset_default_graph()
-    # result.write("######################################\n")
+    result.write("######################################\n")
     ######################################################################################
     # feed dicts and initalize session
     start_sample = True
