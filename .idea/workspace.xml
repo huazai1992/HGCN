@@ -43,23 +43,23 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="19" />
-          <entry key="py" value="1045" />
+          <entry key="py" value="1073" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1064" />
+          <entry key="Python" value="1092" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gnn/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
+            <state relative-caret-position="343">
+              <caret line="106" column="116" selection-start-line="106" selection-start-column="116" selection-end-line="106" selection-end-column="116" />
               <folding>
                 <element signature="e#16#32#0" expanded="true" />
               </folding>
@@ -76,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="158" selection-start-line="158" selection-end-line="158" />
+            <state relative-caret-position="247">
+              <caret line="149" column="36" lean-forward="true" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -110,8 +110,8 @@
       <list>
         <option value="$PROJECT_DIR$/gnn/model.py" />
         <option value="$PROJECT_DIR$/gnn/metrics.py" />
-        <option value="$PROJECT_DIR$/gnn/train.py" />
         <option value="$PROJECT_DIR$/gnn/utils.py" />
+        <option value="$PROJECT_DIR$/gnn/train.py" />
       </list>
     </option>
   </component>
@@ -142,11 +142,6 @@
               <item name="HGCN" type="b2602c69:ProjectViewProjectNode" />
               <item name="HGCN" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HGCN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HGCN" type="462c0819:PsiDirectoryNode" />
-              <item name="gnn" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -223,6 +218,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="811" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17525035" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -327,22 +323,22 @@
         <state relative-caret-position="-448656" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gnn/train.py">
+    <entry file="file://$PROJECT_DIR$/gnn/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
+        <state relative-caret-position="247">
+          <caret line="149" column="36" lean-forward="true" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
           <folding>
-            <element signature="e#16#32#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gnn/utils.py">
+    <entry file="file://$PROJECT_DIR$/gnn/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
+        <state relative-caret-position="343">
+          <caret line="106" column="116" selection-start-line="106" selection-start-column="116" selection-end-line="106" selection-end-column="116" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#16#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
