@@ -76,6 +76,7 @@ inputdims = [feature.shape[1] for feature in truefeatures]
 target_index = HIN_info['node_index'][HIN_info['target_node']]
 featurerows, featurenums = truefeatures[target_index].shape
 para['hiddennum'] = labelnums * 4
+truefeatures = np.array(truefeatures)
 
 allnetworks=[]
 adjnetworks = []
@@ -90,20 +91,24 @@ for networks in rownetworks:
 
 for numi in range(int(iternum)):
     tf.reset_default_graph()
-    result.write("######################################\n")
+    # result.write("######################################\n")
     ######################################################################################
     # feed dicts and initalize session
-    index = np.random.randint(0, Kholdoutvalidation, (samples, 1)) > train_ratio_map[train_ratio]
-    trainindex, testindex = np.where(index == True)[0], np.where(index == False)[0]
-    if para['ispart']:
-        trainindex=list(set(knownindex).intersection(trainindex))
-        testindex=list(set(knownindex).intersection(testindex))
-    else:
-        trainindex=list(trainindex)
-        testindex=list(testindex)
+    start_sample = True
+    while start_sample:
+        index = np.random.randint(0, Kholdoutvalidation, (samples, 1)) > train_ratio_map[train_ratio]
+        trainindex, testindex = np.where(index == True)[0], np.where(index == False)[0]
+        if para['ispart']:
+            trainindex=list(set(knownindex).intersection(trainindex))
+            testindex=list(set(knownindex).intersection(testindex))
+        else:
+            trainindex=list(trainindex)
+            testindex=list(testindex)
+        if len(list(set(rawlabels[trainindex]))) == labelnums or para['ismulit']:
+            start_sample = False
 
     testlabels = truelabels.copy()
-
+    inputfeatures = truefeatures.copy()
     #####################################################################################
     #input layer
     labels = tf.placeholder('float',[None,labelnums])
@@ -126,10 +131,11 @@ for numi in range(int(iternum)):
 
     train = tf.train.RMSPropOptimizer(0.01).minimize(loss)
 
-    traindicts = {labels: truelabels[trainindex], static_feature: truefeature, select_index: trainindex, unchange_index:trainindex, K.learning_phase(): 1}
+    trainlabels = truelabels.copy()
+    traindicts = {labels: trainlabels[trainindex], static_feature: truefeature, select_index: trainindex, unchange_index:trainindex, K.learning_phase(): 1}
     traindicts = dict(traindicts.items() +
                       {Net[i]: allnetworks[i] for i in range(len(allnetworks))}.items() +
-                      {features[i]: truefeatures[i] for i in range(len(truefeatures))}.items() +
+                      {features[i]: inputfeatures[i] for i in range(len(truefeatures))}.items() +
                       {adj_Net[i]: adjnetworks[i] for i in range(len(adjnetworks))}.items())
     traindicts[features[target_index]][testindex] = 0
 
@@ -137,7 +143,7 @@ for numi in range(int(iternum)):
     testdicts = {labels: testlabels, static_feature: truefeature, select_index: testindex, unchange_index: testindex+trainindex, K.learning_phase(): 0}
     testdicts = dict(testdicts.items() +
                      {Net[i]: allnetworks[i] for i in range(len(allnetworks))}.items() +
-                     {features[i]: truefeatures[i] for i in range(len(truefeatures))}.items() +
+                     {features[i]: inputfeatures[i] for i in range(len(truefeatures))}.items() +
                       {adj_Net[i]: adjnetworks[i] for i in range(len(adjnetworks))}.items())
     # testdicts[features[target_index]] = truelabels
     ################################################################################################################
