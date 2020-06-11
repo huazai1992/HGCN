@@ -35,7 +35,6 @@ result=open('../results/result-{}-{}-{}-{}-{}.txt'.format(dataname, kernel_size,
 iter_results=open('../results/%s.%d.%d.%d' % (dataname[:-1], kernel_size, inception_depth, label_propagation), 'a')
 HIN_info = get_HIN_info(dataname)
 
-isfull = False
 
 para={'algorithm':'HGCN', 'output_type':'softmax',   ##describe the experiment
        '_kernel_size':kernel_size,'_inception_depth':inception_depth,
