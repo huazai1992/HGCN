@@ -8,6 +8,7 @@ from keras.layers import ActivityRegularization
 from utils import *
 from model import *
 from metrics import *
+import random
 
 parser = argparse.ArgumentParser(description="your script description")
 parser.add_argument('--dataset', type=str, help='dataset name', default='cora')
@@ -71,7 +72,7 @@ rownetworks, truefeatures, truelabels, knownindex, rawlabels, truefeature, train
                                                                 HIN_info['node_types'], HIN_info['target_node'],
                                                                             para['ispart'], para['ismulti'])
 samples, labelnums = truelabels.shape[0], truelabels.shape[1]
-iternum,perpass,iterica,Kholdoutvalidation=10,25,10,10
+iternum,perpass,iterica,Kholdoutvalidation=5,25,10,10
 inputdims = [feature.shape[1] for feature in truefeatures]
 target_index = HIN_info['node_index'][HIN_info['target_node']]
 featurerows, featurenums = truefeatures[target_index].shape
@@ -94,24 +95,14 @@ for numi in range(int(iternum)):
     result.write("######################################\n")
     ######################################################################################
     # feed dicts and initalize session
-    # start_sample = True
-    # while start_sample:
-    # index = np.random.randint(0, Kholdoutvalidation, (samples, 1)) > train_ratio_map[train_ratio]
-    # trainindex, testindex = np.where(index == True)[0], np.where(index == False)[0]
-    # if para['ispart']:
-    #     trainindex=list(set(knownindex).intersection(trainindex))
-    #     testindex=list(set(knownindex).intersection(testindex))
-    # else:
-    #     trainindex=list(trainindex)
-    #     testindex=list(testindex)
-    #     # if len(list(set(rawlabels[trainindex]))) == labelnums or para['ismulti']:
-    #     #     start_sample = False
-    # with open("../data/net_%s/train.%d.idx" % (dataname, numi), 'w') as f_out:
-    #     for i in trainindex:
-    #         f_out.write('{}\n'.format(i))
-    # with open("../data/net_%s/test.%d.idx" % (dataname, numi), 'w') as f_out:
-    #     for i in testindex:
-    #         f_out.write('{}\n'.format(i))
+    index = np.random.randint(0, Kholdoutvalidation, (samples, 1)) > train_ratio_map[train_ratio]
+    trainindex, testindex = np.where(index == True)[0], np.where(index == False)[0]
+    if para['ispart']:
+        trainindex=list(set(knownindex).intersection(trainindex))
+        testindex=list(set(knownindex).intersection(testindex))
+    else:
+        trainindex=list(trainindex)
+        testindex=list(testindex)
 
     testlabels = truelabels.copy()
     inputfeatures = truefeatures.copy()
@@ -184,7 +175,6 @@ for numi in range(int(iternum)):
             accuracy_multiclass(truelabels[trainindex], testlabels[trainindex]), \
             zero_one_multilabel(truelabels[trainindex], testlabels[trainindex])
         print step, 'test', fscore_macro, hamming_loss, accuracy_s, accuracy_class, fscore_sa, fscore_sa_mi, zero_one_l
-        # accuracy_multiclass_for_each(truelabels[testindex], testlabels[testindex])
         iter_results.write(str(step * perpass) + ':' + str(
             [para, fscore_macro, hamming_loss, accuracy_s, accuracy_class, fscore_sa]) + '\n')
         if step == epochs - 1:
