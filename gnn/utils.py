@@ -158,7 +158,9 @@ def get_data_npz(net, edge_types, node_types, target_node, ispart=True, ismulti=
         labels = labels[:, 1:]
 
     trainindex = np.loadtxt(path + 'train.idx', delimiter='\t', dtype=np.dtype(int))
+    trainindex = trainindex.tolist()
     testindex = np.loadtxt(path + 'test.idx', delimiter='\t', dtype=np.dtype(int))
+    testindex = testindex.tolist()
 
 
     return rawnetworks, features, labels, knownindex, rawlabels_all, truefeature, trainindex, testindex
