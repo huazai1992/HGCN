@@ -97,8 +97,7 @@ def get_HIN_info(net):
 
     return HIN_info
 
-def get_data_npz(net, edge_types, node_types, target_node, ispart=True, ismulti=False,
-                 use_semantic_feature=False):
+def get_data_npz(net, edge_types, node_types, target_node, ispart=True, ismulti=False):
     path = '../data/net_%s/' % net
     rawnetworks = []
     for edge_type in edge_types:
@@ -114,17 +113,12 @@ def get_data_npz(net, edge_types, node_types, target_node, ispart=True, ismulti=
         print 'Load %s feature ...' % node_type
         feat_path = path + '%s.feat.label.npz' % node_type
         feat = sp.load_npz(feat_path)
-        # for imdb performance is worse
-        # for dblp performance is better
-        # if node_type != 'A':
-        # feat = normalize(feat)
         features.append(feat.todense())
 
     if 'slap' in net:
 
         truefeature = sp.load_npz(path + 'G.feat.npz')
         truefeature = truefeature.todense()
-        # truefeature = normalize(truefeature)
     elif 'dblp' in net:
         truefeature = sp.load_npz(path + 'A.feat.npz')
         truefeature = truefeature.todense()
@@ -141,20 +135,16 @@ def get_data_npz(net, edge_types, node_types, target_node, ispart=True, ismulti=
     if ispart:
         label_path_part = path + '%s.label.part' % target_node
         rawlabels_part = np.loadtxt(label_path_part, delimiter='\t', dtype=np.dtype(int))
-        # if dblp-3 using -1
         knownindex = rawlabels_part[:, 0]
     label_path_all = path + '%s.label.all' % target_node
 
     if not ismulti:
         rawlabels_all = np.loadtxt(label_path_all, delimiter='\t', dtype=np.dtype(int))
-        if not use_semantic_feature:
-            labels = encode_onehot(rawlabels_all)
-        else:
-            labels = classes_embeddings(rawlabels_all, path=path+'classes_embeddings.txt')
+        labels = encode_onehot(rawlabels_all)
     else:
         rawlabels_all = np.loadtxt(label_path_all, delimiter='\t', dtype=np.dtype(str))
         labels = encode_onehot_multi(rawlabels_all)
-    if ispart and not use_semantic_feature:
+    if ispart:
         labels = labels[:, 1:]
 
     trainindex = np.loadtxt(path + 'train.idx', delimiter='\t', dtype=np.dtype(int))
