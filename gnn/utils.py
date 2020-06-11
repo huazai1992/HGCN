@@ -157,7 +157,11 @@ def get_data_npz(net, edge_types, node_types, target_node, ispart=True, ismulti=
     if ispart and not use_semantic_feature:
         labels = labels[:, 1:]
 
-    return rawnetworks, features, labels, knownindex, rawlabels_all, truefeature
+    trainindex = np.loadtxt(path + 'train.idx', delimiter='\t', dtype=np.dtype(int))
+    testindex = np.loadtxt(path + 'test.idx', delimiter='\t', dtype=np.dtype(int))
+
+
+    return rawnetworks, features, labels, knownindex, rawlabels_all, truefeature, trainindex, testindex
 
 
 def get_data(net, edge_types, node_types, ispart=True):
