@@ -54,11 +54,11 @@ result.write('{}-{}-{}-{}'.format(kernel_size, inception_depth, label_propagatio
 if 'dblp' in dataname:
     para['output_type'] = 'softmax'
     para['ispart'] = True
-    epochs = 30
+    epochs = 60
 elif 'imdb' in dataname:
     para['output_type'] = 'sigmoid'
     para['ismulti'] = True
-    epochs = 30
+    epochs = 60
 elif 'slap' in dataname:
     para['output_type'] = 'softmax'
     para['ispart'] = True
@@ -66,7 +66,7 @@ elif 'slap' in dataname:
 elif 'cora' in dataname:
     para['output_type'] = 'softmax'
     para['ispart'] = True
-    epochs = 30
+    epochs = 60
 
 rownetworks, truefeatures, truelabels, knownindex, rawlabels, truefeature, trainindex, testindex = get_data_npz(dataname, HIN_info['edge_types'],
                                                                 HIN_info['node_types'], HIN_info['target_node'],
@@ -92,6 +92,7 @@ for networks in rownetworks:
 
 for numi in range(int(iternum)):
     tf.reset_default_graph()
+    tf.set_random_seed(0)
     result.write("######################################\n")
     ######################################################################################
     # feed dicts and initalize session
@@ -142,7 +143,6 @@ for numi in range(int(iternum)):
                      {Net[i]: allnetworks[i] for i in range(len(allnetworks))}.items() +
                      {features[i]: inputfeatures[i] for i in range(len(truefeatures))}.items() +
                       {adj_Net[i]: adjnetworks[i] for i in range(len(adjnetworks))}.items())
-    # testdicts[features[target_index]] = truelabels
     ################################################################################################################
     if GPU:
         # sess = tf.InteractiveSession(config=config)
