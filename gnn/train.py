@@ -113,7 +113,7 @@ for numi in range(int(iternum)):
     Net = [tf.sparse_placeholder('float', [None,None]) for i in range(len(allnetworks))]
     adj_Net = [tf.sparse_placeholder('float', [None, None]) for i in range(len(adjnetworks))]
     static_feature = tf.placeholder('float', [None, truefeature.shape[1]])
-    isstop = tf.placeholder('bool')
+
     select_index = tf.placeholder('int32', [None])
     unchange_index = tf.placeholder('int32', [None])
 
