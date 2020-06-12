@@ -15,8 +15,7 @@ parser.add_argument('--dataset', type=str, help='dataset name', default='cora')
 parser.add_argument('--kernel-size', type=int, help='kernel size', default=4)
 parser.add_argument('--inception-depth', type=int, help='number of inception layers', default=2)
 parser.add_argument('--label-propagation', type=int, help='number of label propagation layers', default=0)
-parser.add_argument('--epochs', type=int, help='number of epochs', default=30)
-parser.add_argument('--train-ratio', type=float, help='training ratio', default=0.8)
+parser.add_argument('--epochs', type=int, help='number of epochs', default=60)
 
 args = parser.parse_args()
 dataname = args.dataset
@@ -41,13 +40,6 @@ para={'algorithm':'HGCN', 'output_type':'softmax',   ##describe the experiment
       '_label_propagation':label_propagation, 'hiddennum':64,
       'ispart':False, 'ismulti': False                      ##basic paramater
      }
-
-train_ratio_map = {
-	0.1: 8,
-	0.2: 7,
-	0.4: 5,
-	0.8: 1
-}
 
 result.write('{}-{}-{}-{}'.format(kernel_size, inception_depth, label_propagation, epochs))
 if 'dblp' in dataname:
@@ -95,7 +87,7 @@ for numi in range(int(iternum)):
     result.write("######################################\n")
     ######################################################################################
     # feed dicts and initalize session
-    index = np.random.randint(0, Kholdoutvalidation, (samples, 1)) > train_ratio_map[train_ratio]
+    index = np.random.randint(0, Kholdoutvalidation, (samples, 1)) > 1
     trainindex, testindex = np.where(index == True)[0], np.where(index == False)[0]
     if para['ispart']:
         trainindex=list(set(knownindex).intersection(trainindex))
