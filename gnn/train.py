@@ -67,7 +67,7 @@ elif 'cora' in dataname:
     para['ispart'] = True
     epochs = 60
 
-rownetworks, truefeatures, truelabels, knownindex, rawlabels, truefeature, trainindex, testindex = get_data_npz(dataname, HIN_info['edge_types'],
+rownetworks, truefeatures, truelabels, knownindex, rawlabels, truefeature = get_data_npz(dataname, HIN_info['edge_types'],
                                                                 HIN_info['node_types'], HIN_info['target_node'],
                                                                             para['ispart'], para['ismulti'])
 samples, labelnums = truelabels.shape[0], truelabels.shape[1]
