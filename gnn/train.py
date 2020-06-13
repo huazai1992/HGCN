@@ -37,11 +37,11 @@ def main(args):
     if 'dblp' in dataname:
         para['output_type'] = 'softmax'
         para['ispart'] = True
-        epochs = 60
+        epochs = 16
     elif 'imdb' in dataname:
         para['output_type'] = 'sigmoid'
         para['ismulti'] = True
-        epochs = 60
+        epochs = 30
     elif 'slap' in dataname:
         para['output_type'] = 'softmax'
         para['ispart'] = True
@@ -49,7 +49,7 @@ def main(args):
     elif 'cora' in dataname:
         para['output_type'] = 'softmax'
         para['ispart'] = True
-        epochs = 60
+        epochs = 30
 
     rownetworks, truefeatures, truelabels, knownindex, rawlabels, truefeature = get_data_npz(dataname, HIN_info['edge_types'],
                                                                     HIN_info['node_types'], HIN_info['target_node'],
@@ -109,7 +109,7 @@ def main(args):
     y = ActivityRegularization(l1=0.01, l2=0.01)(y)
     loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=tf.gather(y,select_index), labels=labels))
 
-    train = tf.train.RMSPropOptimizer(0.01).minimize(loss)
+    train = tf.train.RMSPropOptimizer(0.004).minimize(loss)
 
     trainlabels = truelabels.copy()
     traindicts = {labels: trainlabels[trainindex], static_feature: truefeature, select_index: trainindex, unchange_index:trainindex, K.learning_phase(): 1}
@@ -171,9 +171,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="your script description")
     parser.add_argument('--dataset', type=str, help='dataset name', default='cora')
     parser.add_argument('--kernel-size', type=int, help='kernel size', default=4)
-    parser.add_argument('--inception-depth', type=int, help='number of inception layers', default=2)
+    parser.add_argument('--inception-depth', type=int, help='number of inception layers', default=1)
     parser.add_argument('--label-propagation', type=int, help='number of label propagation layers', default=0)
-    parser.add_argument('--epochs', type=int, help='number of epochs', default=60)
+    parser.add_argument('--epochs', type=int, help='number of epochs', default=30)
 
     args = parser.parse_args()
     main(args)
