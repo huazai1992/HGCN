@@ -61,6 +61,9 @@ def main(args):
     para['hiddennum'] = labelnums * 4
     truefeatures = np.array(truefeatures)
 
+    tf.reset_default_graph()
+    tf.set_random_seed(0)
+
     allnetworks=[]
     adjnetworks = []
     for networks in rownetworks:
@@ -72,8 +75,6 @@ def main(args):
         adjnetworks.append(tf.SparseTensorValue(coords, ones_values, shape))
 
 
-    tf.reset_default_graph()
-    tf.set_random_seed(0)
     result.write("######################################\n")
     ######################################################################################
     # feed dicts and initalize session
