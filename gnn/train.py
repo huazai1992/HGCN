@@ -8,80 +8,71 @@ from keras.layers import ActivityRegularization
 from utils import *
 from model import *
 from metrics import *
-import random
-
-parser = argparse.ArgumentParser(description="your script description")
-parser.add_argument('--dataset', type=str, help='dataset name', default='cora')
-parser.add_argument('--kernel-size', type=int, help='kernel size', default=4)
-parser.add_argument('--inception-depth', type=int, help='number of inception layers', default=2)
-parser.add_argument('--label-propagation', type=int, help='number of label propagation layers', default=0)
-parser.add_argument('--epochs', type=int, help='number of epochs', default=60)
-
-args = parser.parse_args()
-dataname = args.dataset
-kernel_size = int(args.kernel_size)
-inception_depth = int(args.inception_depth)
-label_propagation = int(args.label_propagation)
-epochs = int(args.epochs)
-train_ratio = float(args.train_ratio)
-
-GPU = True
-if GPU:
-    config = tf.ConfigProto()
-    config.gpu_options.allow_growth = True
-
-result=open('../results/result-{}-{}-{}-{}-{}.txt'.format(dataname, kernel_size, inception_depth, label_propagation, train_ratio),'a')
-iter_results=open('../results/%s.%d.%d.%d' % (dataname[:-1], kernel_size, inception_depth, label_propagation), 'a')
-HIN_info = get_HIN_info(dataname)
 
 
-para={'algorithm':'HGCN', 'output_type':'softmax',   ##describe the experiment
-       '_kernel_size':kernel_size,'_inception_depth':inception_depth,
-      '_label_propagation':label_propagation, 'hiddennum':64,
-      'ispart':False, 'ismulti': False                      ##basic paramater
-     }
+def main(args):
+    dataname = args.dataset
+    kernel_size = int(args.kernel_size)
+    inception_depth = int(args.inception_depth)
+    label_propagation = int(args.label_propagation)
+    epochs = int(args.epochs)
+    train_ratio = float(args.train_ratio)
 
-result.write('{}-{}-{}-{}'.format(kernel_size, inception_depth, label_propagation, epochs))
-if 'dblp' in dataname:
-    para['output_type'] = 'softmax'
-    para['ispart'] = True
-    epochs = 60
-elif 'imdb' in dataname:
-    para['output_type'] = 'sigmoid'
-    para['ismulti'] = True
-    epochs = 60
-elif 'slap' in dataname:
-    para['output_type'] = 'softmax'
-    para['ispart'] = True
-    epochs = 8
-elif 'cora' in dataname:
-    para['output_type'] = 'softmax'
-    para['ispart'] = True
-    epochs = 60
+    GPU = True
+    if GPU:
+        config = tf.ConfigProto()
+        config.gpu_options.allow_growth = True
 
-rownetworks, truefeatures, truelabels, knownindex, rawlabels, truefeature = get_data_npz(dataname, HIN_info['edge_types'],
-                                                                HIN_info['node_types'], HIN_info['target_node'],
-                                                                            para['ispart'], para['ismulti'])
-samples, labelnums = truelabels.shape[0], truelabels.shape[1]
-iternum,perpass,iterica,Kholdoutvalidation=5,25,10,10
-inputdims = [feature.shape[1] for feature in truefeatures]
-target_index = HIN_info['node_index'][HIN_info['target_node']]
-featurerows, featurenums = truefeatures[target_index].shape
-para['hiddennum'] = labelnums * 4
-truefeatures = np.array(truefeatures)
-
-allnetworks=[]
-adjnetworks = []
-for networks in rownetworks:
-    tmp = sp.csr_matrix(networks)
-    coords, values, shape = sparse_to_tuple(tmp)
-    allnetworks.append(tf.SparseTensorValue(coords, values, shape))
-
-    ones_values = [1 for _ in range(len(values))]
-    adjnetworks.append(tf.SparseTensorValue(coords, ones_values, shape))
+    result=open('../results/result-{}-{}-{}-{}-{}.txt'.format(dataname, kernel_size, inception_depth, label_propagation, train_ratio),'a')
+    iter_results=open('../results/%s.%d.%d.%d' % (dataname[:-1], kernel_size, inception_depth, label_propagation), 'a')
+    HIN_info = get_HIN_info(dataname)
 
 
-for numi in range(int(iternum)):
+    para={'algorithm':'HGCN', 'output_type':'softmax',   ##describe the experiment
+           '_kernel_size':kernel_size,'_inception_depth':inception_depth,
+          '_label_propagation':label_propagation, 'hiddennum':64,
+          'ispart':False, 'ismulti': False                      ##basic paramater
+         }
+
+    result.write('{}-{}-{}-{}'.format(kernel_size, inception_depth, label_propagation, epochs))
+    if 'dblp' in dataname:
+        para['output_type'] = 'softmax'
+        para['ispart'] = True
+        epochs = 60
+    elif 'imdb' in dataname:
+        para['output_type'] = 'sigmoid'
+        para['ismulti'] = True
+        epochs = 60
+    elif 'slap' in dataname:
+        para['output_type'] = 'softmax'
+        para['ispart'] = True
+        epochs = 8
+    elif 'cora' in dataname:
+        para['output_type'] = 'softmax'
+        para['ispart'] = True
+        epochs = 60
+
+    rownetworks, truefeatures, truelabels, knownindex, rawlabels, truefeature = get_data_npz(dataname, HIN_info['edge_types'],
+                                                                    HIN_info['node_types'], HIN_info['target_node'],
+                                                                                para['ispart'], para['ismulti'])
+    samples, labelnums = truelabels.shape[0], truelabels.shape[1]
+    Kholdoutvalidation = 10
+    inputdims = [feature.shape[1] for feature in truefeatures]
+    target_index = HIN_info['node_index'][HIN_info['target_node']]
+    para['hiddennum'] = labelnums * 4
+    truefeatures = np.array(truefeatures)
+
+    allnetworks=[]
+    adjnetworks = []
+    for networks in rownetworks:
+        tmp = sp.csr_matrix(networks)
+        coords, values, shape = sparse_to_tuple(tmp)
+        allnetworks.append(tf.SparseTensorValue(coords, values, shape))
+
+        ones_values = [1 for _ in range(len(values))]
+        adjnetworks.append(tf.SparseTensorValue(coords, ones_values, shape))
+
+
     tf.reset_default_graph()
     tf.set_random_seed(0)
     result.write("######################################\n")
@@ -145,7 +136,7 @@ for numi in range(int(iternum)):
     print para
 
     for step in range(epochs):
-        for iter in range(perpass):
+        for iter in range(25):
             _, train_loss = sess.run([train, loss], feed_dict=traindicts)
             print iter, train_loss
 
@@ -166,11 +157,10 @@ for numi in range(int(iternum)):
             accuracy_multiclass(truelabels[trainindex], testlabels[trainindex]), \
             zero_one_multilabel(truelabels[trainindex], testlabels[trainindex])
         print step, 'test', fscore_macro, hamming_loss, accuracy_s, accuracy_class, fscore_sa, fscore_sa_mi, zero_one_l
-        iter_results.write(str(step * perpass) + ':' + str(
+        iter_results.write(str(step * 25) + ':' + str(
             [para, fscore_macro, hamming_loss, accuracy_s, accuracy_class, fscore_sa]) + '\n')
         if step == epochs - 1:
-            result.write(
-                str(numi) + ':' + str([fscore_macro, hamming_loss,
+            result.write(str([fscore_macro, hamming_loss,
                                        accuracy_s, accuracy_class,
                                        fscore_sa, fscore_sa_mi, zero_one_l]) + '\n')
 
@@ -179,6 +169,18 @@ for numi in range(int(iternum)):
                     #str_embedding = " ".join([str(elem) for elem in embedding])
                     #f_out.write(str_embedding + '\n')
     # train_writer.close()
-iter_results.close()
-result.close()
+    iter_results.close()
+    result.close()
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="your script description")
+    parser.add_argument('--dataset', type=str, help='dataset name', default='cora')
+    parser.add_argument('--kernel-size', type=int, help='kernel size', default=4)
+    parser.add_argument('--inception-depth', type=int, help='number of inception layers', default=2)
+    parser.add_argument('--label-propagation', type=int, help='number of label propagation layers', default=0)
+    parser.add_argument('--epochs', type=int, help='number of epochs', default=60)
+
+    args = parser.parse_args()
+
+
 
