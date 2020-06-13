@@ -16,14 +16,13 @@ def main(args):
     inception_depth = int(args.inception_depth)
     label_propagation = int(args.label_propagation)
     epochs = int(args.epochs)
-    train_ratio = float(args.train_ratio)
 
     GPU = True
     if GPU:
         config = tf.ConfigProto()
         config.gpu_options.allow_growth = True
 
-    result=open('../results/result-{}-{}-{}-{}-{}.txt'.format(dataname, kernel_size, inception_depth, label_propagation, train_ratio),'a')
+    result=open('../results/result-{}-{}-{}-{}.txt'.format(dataname, kernel_size, inception_depth, label_propagation),'a')
     iter_results=open('../results/%s.%d.%d.%d' % (dataname[:-1], kernel_size, inception_depth, label_propagation), 'a')
     HIN_info = get_HIN_info(dataname)
 
@@ -100,7 +99,7 @@ def main(args):
     select_index = tf.placeholder('int32', [None])
     unchange_index = tf.placeholder('int32', [None])
 
-    y, embds = GraphInceptionv3(adj_Net, Net, static_feature, features, inputdims, labelnums, para['_inception_depth'],
+    y, _ = GraphInceptionv3(adj_Net, Net, static_feature, features, inputdims, labelnums, para['_inception_depth'],
                           para['_kernel_size'], para['_label_propagation'],
                           para['hiddennum'], is_part=para['ispart'],outputtype=para['output_type'], HIN_info=HIN_info,
                             select_index=select_index, unchange_index=unchange_index)
@@ -141,7 +140,7 @@ def main(args):
             print iter, train_loss
 
         testdicts[features[target_index]][testindex] = 0.
-        testlabels, embeddings = sess.run([y, embds], feed_dict=testdicts)
+        testlabels, _ = sess.run(y, feed_dict=testdicts)
 
         ############################evaluate results################################################
         fscore_macro = fscore(truelabels[testindex], testlabels[testindex])
@@ -163,14 +162,9 @@ def main(args):
             result.write(str([fscore_macro, hamming_loss,
                                        accuracy_s, accuracy_class,
                                        fscore_sa, fscore_sa_mi, zero_one_l]) + '\n')
-
-            #with open('../Embeddings/zl_{}_cora_10_content.txt'.format(numi), 'w') as f_out:
-                #for embedding in list(embeddings[target_index]):
-                    #str_embedding = " ".join([str(elem) for elem in embedding])
-                    #f_out.write(str_embedding + '\n')
-    # train_writer.close()
     iter_results.close()
     result.close()
+    sess.close()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="your script description")
@@ -181,6 +175,7 @@ if __name__ == '__main__':
     parser.add_argument('--epochs', type=int, help='number of epochs', default=60)
 
     args = parser.parse_args()
+    main(args)
 
 
 
