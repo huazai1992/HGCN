@@ -87,7 +87,7 @@ def graph_inception_module(inputs,kernelsize,inputdims,outputdim,multinetworks,H
 
     if need1X1:
         for i in range(len(final_convs)):
-            final_convs[i] = Conv2D(1, (1, 1), padding="same", activation="relu", data_format="channels_first")(final_convs[i])
+            final_convs[i] = Conv2D(1, (1, 1), padding="same", activation="relu", data_format="channels_first", use_bias=False)(final_convs[i])
             final_convs[i] = K.reshape(tf.transpose(final_convs[i],perm=[2,0,1,3]),shape=(-1, outputdim))
     return final_convs
 
