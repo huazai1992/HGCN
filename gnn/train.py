@@ -33,7 +33,6 @@ def main(args):
           'ispart':False, 'ismulti': False                      ##basic paramater
          }
 
-    result.write('{}-{}-{}-{}'.format(kernel_size, inception_depth, label_propagation, epochs))
     if 'dblp' in dataname:
         para['output_type'] = 'softmax'
         para['ispart'] = True
@@ -50,6 +49,7 @@ def main(args):
         para['output_type'] = 'softmax'
         para['ispart'] = True
         epochs = 30
+    result.write('{}-{}-{}-{}'.format(kernel_size, inception_depth, label_propagation, epochs))
 
     rownetworks, truefeatures, truelabels, knownindex, rawlabels, truefeature = get_data_npz(dataname, HIN_info['edge_types'],
                                                                     HIN_info['node_types'], HIN_info['target_node'],
