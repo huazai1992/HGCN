@@ -36,19 +36,15 @@ def main(args):
     if 'dblp' in dataname:
         para['output_type'] = 'softmax'
         para['ispart'] = True
-        epochs = 16
     elif 'imdb' in dataname:
         para['output_type'] = 'sigmoid'
         para['ismulti'] = True
-        epochs = 30
     elif 'slap' in dataname:
         para['output_type'] = 'softmax'
         para['ispart'] = True
-        epochs = 8
     elif 'cora' in dataname:
         para['output_type'] = 'softmax'
         para['ispart'] = True
-        epochs = 30
     result.write('{}-{}-{}-{}'.format(kernel_size, inception_depth, label_propagation, epochs))
 
     rownetworks, truefeatures, truelabels, knownindex, rawlabels, truefeature = get_data_npz(dataname, HIN_info['edge_types'],

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b8e0dcdf-48a9-424e-bdbc-cc513c8e7d14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gnn/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/gnn/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gnn/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/gnn/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,48 +12,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/HGCN$train.coverage" NAME="train Coverage Results" MODIFIED="1592269940397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gnn" />
+    <SUITE FILE_PATH="coverage/HGCN$train.coverage" NAME="train Coverage Results" MODIFIED="1593574019120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gnn" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1439225653">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="53" />
-          <entry key="project.open.time.0" value="19" />
-          <entry key="project.open.time.1" value="4" />
+          <entry key="project.closed" value="69" />
+          <entry key="project.open.time.0" value="26" />
+          <entry key="project.open.time.1" value="11" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.5" value="19" />
+          <entry key="project.open.time.5" value="20" />
           <entry key="project.open.time.6" value="8" />
-          <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="53" />
+          <entry key="project.open.time.7" value="3" />
+          <entry key="project.opened" value="69" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="all" value="6" />
-          <entry key="config" value="6" />
+          <entry key="all" value="12" />
+          <entry key="config" value="12" />
           <entry key="out" value="1" />
-          <entry key="part" value="14" />
-          <entry key="py" value="21" />
+          <entry key="part" value="18" />
+          <entry key="py" value="25" />
           <entry key="sh" value="3" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="21" />
+          <entry key="PLAIN_TEXT" value="50" />
+          <entry key="Python" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="109" />
-          <entry key="py" value="1815" />
+          <entry key="Python Console" value="133" />
+          <entry key="py" value="2329" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1924" />
+          <entry key="Python" value="2462" />
         </counts>
       </usages-collector>
     </session>
@@ -63,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gnn/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="51" column="95" selection-start-line="51" selection-start-column="95" selection-end-line="51" selection-end-column="95" />
+            <state relative-caret-position="-417">
+              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
               <folding>
                 <element signature="e#16#32#0" expanded="true" />
               </folding>
@@ -75,8 +75,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3696">
-              <caret line="173" column="23" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="23" />
+            <state relative-caret-position="1562">
+              <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/net_cora/P.label.part">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195734">
+              <caret line="8897" column="10" selection-start-line="8897" selection-start-column="10" selection-end-line="8897" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -84,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3212">
-              <caret line="150" column="80" selection-start-line="150" selection-start-column="69" selection-end-line="150" selection-end-column="80" />
+            <state relative-caret-position="2046">
+              <caret line="93" column="32" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="32" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -110,6 +119,15 @@
       <find>isfull</find>
       <find>isstop</find>
       <find>Conv2D</find>
+      <find>adjnetworks</find>
+      <find>truefeature</find>
+      <find>hiddennum</find>
+      <find>para['hiddennum']</find>
+      <find>_label_propagation</find>
+      <find>_kernel_size</find>
+      <find>_inception_depth</find>
+      <find>edge_types</find>
+      <find>cross_node</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,7 +159,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,12 +179,25 @@
             <path>
               <item name="HGCN" type="b2602c69:ProjectViewProjectNode" />
               <item name="HGCN" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="net_cora" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HGCN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HGCN" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="net_imdb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HGCN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HGCN" type="462c0819:PsiDirectoryNode" />
               <item name="gnn" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,15 +267,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="812" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="814" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30114448" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37553647" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6425591" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.63950276" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -255,7 +284,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32962447" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32872927" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -292,17 +321,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/net_cora/P.label.all">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-426150" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/net_slap/G.label.part" />
-    <entry file="file://$PROJECT_DIR$/data/net_cora/P.label.part">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195546" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/net_slap/G.label.all" />
     <entry file="file://$USER_HOME$/anaconda3/envs/tensorflow/lib/python2.7/site-packages/tensorflow/python/framework/random_seed.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -319,15 +338,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/net_imdb/IMDBdataset_emb_exit.txt" />
-    <entry file="file://$PROJECT_DIR$/data/net_imdb/M.label.all">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/cora.config">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/imdb.config">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/tensorflow/lib/python2.7/site-packages/keras/layers/convolutional.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
@@ -335,10 +345,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/net_cora/P.label.all">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425949">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/net_imdb/M.label.all">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-287979" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/tensorflow/lib/python2.7/site-packages/keras/layers/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1011">
+          <caret line="859" column="8" selection-start-line="859" selection-start-column="8" selection-end-line="859" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/imdb.config">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/cora.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="10" selection-start-line="1" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gnn/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="51" column="95" selection-start-line="51" selection-start-column="95" selection-end-line="51" selection-end-column="95" />
+        <state relative-caret-position="-417">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
           <folding>
             <element signature="e#16#32#0" expanded="true" />
           </folding>
@@ -347,15 +386,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gnn/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3696">
-          <caret line="173" column="23" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="23" />
+        <state relative-caret-position="1562">
+          <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/net_cora/P.label.part">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195734">
+          <caret line="8897" column="10" selection-start-line="8897" selection-start-column="10" selection-end-line="8897" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gnn/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3212">
-          <caret line="150" column="80" selection-start-line="150" selection-start-column="69" selection-end-line="150" selection-end-column="80" />
+        <state relative-caret-position="2046">
+          <caret line="93" column="32" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="32" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
