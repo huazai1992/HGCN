@@ -167,8 +167,8 @@ def GraphInceptionv3(adjnetworks, multinetworks, org_feature, relFeature, inputd
             hiddendims = [hiddendim for _ in range(len(relFeature))]
             relFeature = graph_inception_module(relFeature, kernelsize, hiddendims, hiddendim, multinetworks,HIN_info,need1x1)
 
-    tragetFeature = concatenate([org_feature, relFeature[target_index]], axis=1)
-    y=Dense(outputdim, activation=outputtype)(tragetFeature)
+    targetFeature = concatenate([org_feature, relFeature[target_index]], axis=1)
+    y=Dense(outputdim, activation=outputtype)(targetFeature)
 
 
     return y,relFeature

@@ -137,7 +137,7 @@ def main(args):
             print iter, train_loss
 
         testdicts[features[target_index]][testindex] = 0.
-        testlabels, _ = sess.run(y, feed_dict=testdicts)
+        testlabels = sess.run(y, feed_dict=testdicts)
 
         ############################evaluate results################################################
         fscore_macro = fscore(truelabels[testindex], testlabels[testindex])
