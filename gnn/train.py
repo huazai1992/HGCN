@@ -58,7 +58,8 @@ def main(args):
     truefeatures = np.array(truefeatures)
 
     tf.reset_default_graph()
-    tf.set_random_seed(0)
+    # np.random.seed(8)
+    tf.set_random_seed(8)
 
     allnetworks=[]
     adjnetworks = []
@@ -115,11 +116,11 @@ def main(args):
                       {adj_Net[i]: adjnetworks[i] for i in range(len(adjnetworks))}.items())
     traindicts[features[target_index]][testindex] = 0.
 
-
+    inputfeatures_ = truefeatures.copy()
     testdicts = {labels: testlabels, static_feature: truefeature, select_index: testindex, unchange_index: testindex+trainindex, K.learning_phase(): 0}
     testdicts = dict(testdicts.items() +
                      {Net[i]: allnetworks[i] for i in range(len(allnetworks))}.items() +
-                     {features[i]: inputfeatures[i] for i in range(len(truefeatures))}.items() +
+                     {features[i]: inputfeatures_[i] for i in range(len(truefeatures))}.items() +
                       {adj_Net[i]: adjnetworks[i] for i in range(len(adjnetworks))}.items())
     ################################################################################################################
     if GPU:
@@ -162,6 +163,7 @@ def main(args):
     iter_results.close()
     result.close()
     sess.close()
+    tf.get_default_graph().finalize()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="your script description")
