@@ -23,8 +23,8 @@ $ python train.py --dataset imdb --kernel-size 2 --inception-depth 1 --label-pro
 
 ### Training on your own datasets
 
-If you want to train HGCN on your own dataset, you should prepare the following three(or four) files:
+If you want to train HGCN on your own dataset, you should prepare the following four files:
 - *.adj.npz: The adjacency matrix for each type of edges.
-- *.feat.label.npz: The one-hot codes of the labels of target-type nodes. Note that, \bm{0} to initialize the features of nontarget-type nodes and the test nodes in $\mathcal{U}_{1}$.
+- *.feat.label.npz: The one-hot codes of the labels of target-type nodes. Note that, 0 to initialize the features of nontarget-type nodes and the test nodes.
 - *.label.all: The labels of all target-type nodes. Each line contains one token `<label>`.
 - *.label.part: the target-type nodes that have the labels, and their labels. Each line contains two token `<node> <label>`.
