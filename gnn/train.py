@@ -17,7 +17,7 @@ def main(args):
     label_propagation = int(args.label_propagation)
     epochs = int(args.epochs)
 
-    GPU = True
+    GPU = False
     if GPU:
         config = tf.ConfigProto()
         config.gpu_options.allow_growth = True
@@ -58,7 +58,7 @@ def main(args):
     truefeatures = np.array(truefeatures)
 
     tf.reset_default_graph()
-    # np.random.seed(8)
+    np.random.seed(8)
     tf.set_random_seed(8)
 
     allnetworks=[]
