@@ -16,6 +16,7 @@ def main(args):
     inception_depth = int(args.inception_depth)
     label_propagation = int(args.label_propagation)
     epochs = int(args.epochs)
+    seed = int(args.seed)
 
     GPU = False
     if GPU:
@@ -58,8 +59,8 @@ def main(args):
     truefeatures = np.array(truefeatures)
 
     tf.reset_default_graph()
-    np.random.seed(8)
-    tf.set_random_seed(8)
+    np.random.seed(seed)
+    tf.set_random_seed(seed)
 
     allnetworks=[]
     adjnetworks = []
@@ -172,6 +173,7 @@ if __name__ == '__main__':
     parser.add_argument('--inception-depth', type=int, help='number of inception layers', default=1)
     parser.add_argument('--label-propagation', type=int, help='number of label propagation layers', default=0)
     parser.add_argument('--epochs', type=int, help='number of epochs', default=30)
+    parser.add_argument('--seed', type=int, help='number of seed', default=8)
 
     args = parser.parse_args()
     main(args)
