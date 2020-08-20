@@ -145,7 +145,7 @@ def main(args):
         testlabels = sess.run(y, feed_dict=testdicts)
 
         ############################evaluate results################################################
-        fscore_macro = fscore(truelabels[testindex], testlabels[testindex])
+        fscore_micro = fscore(truelabels[testindex], testlabels[testindex])
         hamming_loss = hamming_distance(truelabels[testindex], testlabels[testindex])
         accuracy_s = accuracy_subset(truelabels[testindex], testlabels[testindex])
         accuracy_class = accuracy_multiclass(truelabels[testindex], testlabels[testindex])
@@ -157,11 +157,11 @@ def main(args):
             accuracy_subset(truelabels[trainindex], testlabels[trainindex]), \
             accuracy_multiclass(truelabels[trainindex], testlabels[trainindex]), \
             zero_one_multilabel(truelabels[trainindex], testlabels[trainindex])
-        print step, 'test', fscore_macro, hamming_loss, accuracy_s, accuracy_class, fscore_sa, fscore_sa_mi, zero_one_l
+        print step, 'test', fscore_micro, hamming_loss, accuracy_s, accuracy_class, fscore_sa, fscore_sa_mi, zero_one_l
         iter_results.write(str(step * 25) + ':' + str(
-            [para, fscore_macro, hamming_loss, accuracy_s, accuracy_class, fscore_sa]) + '\n')
+            [para, fscore_micro, hamming_loss, accuracy_s, accuracy_class, fscore_sa]) + '\n')
         if step == epochs - 1:
-            result.write(str([fscore_macro, hamming_loss,
+            result.write(str([fscore_micro, hamming_loss,
                                        accuracy_s, accuracy_class,
                                        fscore_sa, fscore_sa_mi, zero_one_l]) + '\n')
     iter_results.close()
