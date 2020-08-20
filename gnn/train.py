@@ -1,7 +1,7 @@
 #encoding=utf-8
 import itertools
 import argparse
-# import os
+import os
 # os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 # os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 from keras.layers import ActivityRegularization
@@ -22,6 +22,9 @@ def main(args):
     if GPU:
         config = tf.ConfigProto()
         config.gpu_options.allow_growth = True
+
+    if not os.path.exists('../results'):
+        os.makedirs('../results')
 
     result=open('../results/result-{}-{}-{}-{}.txt'.format(dataname, kernel_size, inception_depth, label_propagation),'a')
     iter_results=open('../results/%s.%d.%d.%d' % (dataname[:-1], kernel_size, inception_depth, label_propagation), 'a')
