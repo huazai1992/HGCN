@@ -62,8 +62,6 @@ def main(args):
     truefeatures = np.array(truefeatures)
 
     tf.reset_default_graph()
-    np.random.seed(seed)
-    tf.set_random_seed(seed)
 
     allnetworks=[]
     adjnetworks = []
@@ -87,6 +85,10 @@ def main(args):
     else:
         trainindex=list(trainindex)
         testindex=list(testindex)
+
+    # random.seed(seed)
+    np.random.seed(seed)
+    tf.set_random_seed(seed)
 
     testlabels = truelabels.copy()
     inputfeatures = truefeatures.copy()
