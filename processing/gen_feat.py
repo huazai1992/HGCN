@@ -53,7 +53,7 @@ def label_feature(path, output_path, node_type, target_type):
     if node_type == target_type:
 
         feat = encode_onehot(labels, flag=True)
-        feat = feat[:, 1:]
+        feat = feat[:, 1:] # if there exist the nodes without labels
         feat = sp.csr_matrix(feat)
     else:
         entity_n = nodes_map[node_type]
