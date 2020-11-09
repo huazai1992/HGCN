@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8e0dcdf-48a9-424e-bdbc-cc513c8e7d14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/processing/data_example/A.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/processing/data_example/P.label.all" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/processing/data_example/P.label.part" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/processing/data_example/P.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/processing/data_example/PA.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing/gen_adj.py" beforeDir="false" afterPath="$PROJECT_DIR$/processing/gen_adj.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing/gen_feat.py" beforeDir="false" afterPath="$PROJECT_DIR$/processing/gen_feat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processing/data_example/PA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/processing/data_example/PA.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,30 +20,30 @@
     <session id="-1439225653">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="93" />
-          <entry key="project.open.time.0" value="33" />
+          <entry key="project.closed" value="94" />
+          <entry key="project.open.time.0" value="34" />
           <entry key="project.open.time.1" value="24" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.5" value="22" />
           <entry key="project.open.time.6" value="9" />
           <entry key="project.open.time.7" value="5" />
-          <entry key="project.opened" value="94" />
+          <entry key="project.opened" value="95" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="all" value="13" />
+          <entry key="all" value="14" />
           <entry key="config" value="12" />
           <entry key="out" value="1" />
           <entry key="part" value="19" />
           <entry key="py" value="34" />
           <entry key="sh" value="3" />
-          <entry key="txt" value="6" />
+          <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="54" />
+          <entry key="PLAIN_TEXT" value="60" />
           <entry key="Python" value="34" />
         </counts>
       </usages-collector>
@@ -73,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="1958">
               <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
               <folding>
                 <element signature="e#16#32#0" expanded="true" />
@@ -85,7 +79,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
+            <state relative-caret-position="1650">
               <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
@@ -97,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
+            <state relative-caret-position="3234">
               <caret line="147" column="30" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="30" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -106,12 +100,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/metrics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="441">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/processing/data_example/PA.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1101187" />
           </provider>
         </entry>
       </file>
@@ -176,7 +177,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,6 +209,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,8 +333,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="822" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -459,35 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gnn/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
-          <folding>
-            <element signature="e#16#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processing/data_example/PA.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processing/data_example/P.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processing/data_example/P.label.all">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gnn/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="147" column="30" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/processing/data_example/P.label.part">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -495,16 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="661">
           <caret line="8897" column="10" selection-start-line="8897" selection-start-column="10" selection-end-line="8897" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gnn/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -525,11 +488,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gnn/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1958">
+          <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
+          <folding>
+            <element signature="e#16#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gnn/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gnn/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3234">
+          <caret line="147" column="30" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processing/data_example/P.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426139" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processing/data_example/P.label.all">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426139" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processing/data_example/A.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-548569" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gnn/metrics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="441">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processing/data_example/PA.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1101187" />
       </provider>
     </entry>
   </component>
