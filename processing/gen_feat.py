@@ -63,15 +63,15 @@ def label_feature(path, output_path, node_type, target_type):
     sp.save_npz(output_path, feat)
 
 if __name__ == '__main__':
-    target_type = ''
+    target_type = 'P'
 
-    gen_labels(target_type=target_type)
+    # gen_labels(target_type=target_type)
 
 
-    node_types = ['']
+    node_types = ['P']
     for node_type in node_types:
-        label_feature(path='./%s.label.all' % target_type,
-                        output_path='./%s.feat.label' % node_type,
+        label_feature(path='./data_example/%s.label.all' % target_type,
+                        output_path='./data_example/%s.feat.label' % node_type,
                         node_type=node_type,
                       target_type=target_type)
 

@@ -20,7 +20,7 @@ def normt_spm(mx, method='in'):
 
 
 def generate_adj(edge_type):
-    dir = 'your data path'
+    dir = './data_example/'
     # "%s.txt" is the edges' file. e.g., PA.txt: <P_node_idx>\t<A_node_idx>
     path = dir + '%s.txt' % (edge_type)
 
@@ -49,10 +49,10 @@ def generate_adj(edge_type):
 
     L_adj_h = np.hsplit(L_adj, (row,))[1]
     L_adj_v = np.vsplit(L_adj_h, (row,))[0]
-    sp.save_npz('./%s.adj.npz' % edge_type, sp.coo_matrix(L_adj_v))
+    sp.save_npz('./data_example/%s.adj.npz' % edge_type, sp.coo_matrix(L_adj_v))
 
 
 if __name__ == '__main__':
-    edge_types = [""]
+    edge_types = ["PA"]
     for edge_type in edge_types:
         generate_adj(edge_type)

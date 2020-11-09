@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8e0dcdf-48a9-424e-bdbc-cc513c8e7d14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/processing/data_example/A.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/processing/data_example/P.label.all" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/processing/data_example/P.label.part" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/processing/data_example/P.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/processing/data_example/PA.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processing/gen_adj.py" beforeDir="false" afterPath="$PROJECT_DIR$/processing/gen_adj.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processing/gen_feat.py" beforeDir="false" afterPath="$PROJECT_DIR$/processing/gen_feat.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,49 +19,51 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/HGCN$train.coverage" NAME="train Coverage Results" MODIFIED="1593574019120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gnn" />
+    <SUITE FILE_PATH="coverage/HGCN$gen_feat.coverage" NAME="gen_feat Coverage Results" MODIFIED="1604925693026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/processing" />
+    <SUITE FILE_PATH="coverage/HGCN$gen_adj.coverage" NAME="gen_adj Coverage Results" MODIFIED="1604925444602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/processing" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1439225653">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="92" />
-          <entry key="project.open.time.0" value="31" />
+          <entry key="project.closed" value="93" />
+          <entry key="project.open.time.0" value="33" />
           <entry key="project.open.time.1" value="24" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.5" value="22" />
           <entry key="project.open.time.6" value="9" />
           <entry key="project.open.time.7" value="5" />
-          <entry key="project.opened" value="92" />
+          <entry key="project.opened" value="94" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="all" value="12" />
+          <entry key="all" value="13" />
           <entry key="config" value="12" />
           <entry key="out" value="1" />
-          <entry key="part" value="18" />
-          <entry key="py" value="32" />
+          <entry key="part" value="19" />
+          <entry key="py" value="34" />
           <entry key="sh" value="3" />
-          <entry key="txt" value="4" />
+          <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="50" />
-          <entry key="Python" value="32" />
+          <entry key="PLAIN_TEXT" value="54" />
+          <entry key="Python" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="205" />
           <entry key="dummy" value="8" />
-          <entry key="py" value="2944" />
+          <entry key="py" value="3117" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="3149" />
+          <entry key="Python" value="3322" />
         </counts>
       </usages-collector>
     </session>
@@ -64,7 +73,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1958">
+            <state>
               <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
               <folding>
                 <element signature="e#16#32#0" expanded="true" />
@@ -76,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
+            <state relative-caret-position="625">
               <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
@@ -86,18 +95,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/net_cora/P.label.part">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195734">
-              <caret line="8897" column="10" selection-start-line="8897" selection-start-column="10" selection-end-line="8897" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3234">
+            <state relative-caret-position="625">
               <caret line="147" column="30" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="30" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -107,31 +107,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/processing/gen_adj.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/processing/gen_feat.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/metrics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="40" column="16" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="16" />
+            <state relative-caret-position="1">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -176,8 +155,8 @@
         <option value="$PROJECT_DIR$/gnn/utils.py" />
         <option value="$PROJECT_DIR$/gnn/model.py" />
         <option value="$PROJECT_DIR$/gnn/train.py" />
-        <option value="$PROJECT_DIR$/processing/gen_adj.py" />
         <option value="$PROJECT_DIR$/processing/gen_feat.py" />
+        <option value="$PROJECT_DIR$/processing/gen_adj.py" />
       </list>
     </option>
   </component>
@@ -220,6 +199,12 @@
               <item name="HGCN" type="462c0819:PsiDirectoryNode" />
               <item name="processing" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="HGCN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HGCN" type="462c0819:PsiDirectoryNode" />
+              <item name="processing" type="462c0819:PsiDirectoryNode" />
+              <item name="data_example" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -235,6 +220,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/processing/data_example" />
       <recent name="$PROJECT_DIR$/processing" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
@@ -251,7 +237,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.gen_feat">
+    <configuration name="gen_adj" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HGCN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/processing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/processing/gen_adj.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gen_feat" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HGCN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/processing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/processing/gen_feat.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="HGCN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -274,8 +304,15 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.train" />
+      <item itemvalue="Python.gen_adj" />
+      <item itemvalue="Python.gen_feat" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.gen_feat" />
+        <item itemvalue="Python.gen_adj" />
         <item itemvalue="Python.train" />
       </list>
     </recent_temporary>
@@ -295,14 +332,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="822" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.63950276" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.63835615" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -425,7 +461,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gnn/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1958">
+        <state>
           <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
           <folding>
             <element signature="e#16#32#0" expanded="true" />
@@ -433,26 +469,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gnn/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/processing/data_example/PA.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/net_cora/P.label.part">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195734">
-          <caret line="8897" column="10" selection-start-line="8897" selection-start-column="10" selection-end-line="8897" selection-end-column="10" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/processing/data_example/P.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processing/data_example/P.label.all">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/gnn/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3234">
+        <state relative-caret-position="625">
           <caret line="147" column="30" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="30" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -460,27 +488,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gnn/metrics.py">
+    <entry file="file://$PROJECT_DIR$/processing/data_example/P.label.part">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/net_cora/P.label.part">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="16" />
+        <state relative-caret-position="661">
+          <caret line="8897" column="10" selection-start-line="8897" selection-start-column="10" selection-end-line="8897" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/processing/gen_feat.py">
+    <entry file="file://$PROJECT_DIR$/gnn/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
-          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/processing/gen_adj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+        <state relative-caret-position="441">
+          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processing/gen_feat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="73" column="51" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gnn/metrics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
