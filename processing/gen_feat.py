@@ -28,19 +28,19 @@ def encode_onehot(labels, flag=False):
 
 def gen_labels(target_type, ispart=True):
     # the label file: <node_idx>\t<label_idx>. if <node_idx> has not a label, <label_idx> is fixed as 0,
-    labels = read_dat(path='your data path', file_name='label file')
+    labels = read_dat(path='data_example/', file_name='P.txt')
 
     labels_part = []
-    for i, j in enumerate(labels):
+    for j in labels:
         if ispart:
-            if j != 0:
-                labels_part.append([i, j])
+            if j[1] != 0:
+                labels_part.append(j)
         else:
-            labels_part.append([i, j])
+            labels_part.append(j)
 
     with open('./%s.label.all' % target_type, 'w') as fall:
         for l in labels:
-            fall.write('{}\n'.format(l))
+            fall.write('{}\n'.format(l[1]))
 
     with open('./%s.label.part' % target_type, 'w') as fpart:
         for l in labels_part:
@@ -65,7 +65,7 @@ def label_feature(path, output_path, node_type, target_type):
 if __name__ == '__main__':
     target_type = 'P'
 
-    # gen_labels(target_type=target_type)
+    gen_labels(target_type=target_type)
 
 
     node_types = ['P']
