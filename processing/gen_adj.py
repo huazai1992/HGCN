@@ -1,5 +1,6 @@
 import scipy.sparse as sp
 import numpy as np
+import argparse
 
 def normt_spm(mx, method='in'):
     if method == 'in':
@@ -19,9 +20,11 @@ def normt_spm(mx, method='in'):
         return mx
 
 
-def generate_adj(edge_type):
-    dir = './data_example/'
+def generate_adj(edge_type, input_dir, output_dir):
+    dir = input_dir
     # "%s.txt" is the edges' file. e.g., PA.txt: <P_node_idx>\t<A_node_idx>
+    if dir[-1] != '/':
+        dir += '/'
     path = dir + '%s.txt' % (edge_type)
 
     edges = np.loadtxt(path, delimiter='\t', dtype='int')
@@ -49,10 +52,20 @@ def generate_adj(edge_type):
 
     L_adj_h = np.hsplit(L_adj, (row,))[1]
     L_adj_v = np.vsplit(L_adj_h, (row,))[0]
-    sp.save_npz('./data_example/%s.adj.npz' % edge_type, sp.coo_matrix(L_adj_v))
+
+    if output_dir[-1] != '/':
+        output_dir += '/'
+    sp.save_npz(output_dir + '%s.adj.npz' % edge_type, sp.coo_matrix(L_adj_v))
 
 
 if __name__ == '__main__':
-    edge_types = ["PA"]
+    parser = argparse.ArgumentParser(description="your script description")
+    parser.add_argument('--edge-list', type=str)
+    parser.add_argument('--input-dir', type=str)
+    parser.add_argument('--output-dir', type=str)
+
+    args = parser.parse_args()
+
+    edge_types = args.edge_list.split(',')
     for edge_type in edge_types:
-        generate_adj(edge_type)
+        generate_adj(edge_type, args.input_dir, args.output_dir)
