@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8e0dcdf-48a9-424e-bdbc-cc513c8e7d14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/processing/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing/data_example/A.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing/data_example/DBLP_four_area.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing/data_example/P.label.all" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing/data_example/P.label.part" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing/data_example/P.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing/data_example/PA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing/gen_adj.py" beforeDir="false" afterPath="$PROJECT_DIR$/processing/gen_adj.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing/gen_feat.py" beforeDir="false" afterPath="$PROJECT_DIR$/processing/gen_feat.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,14 +19,15 @@
     <session id="-1439225653">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="106" />
+          <entry key="project.closed" value="108" />
           <entry key="project.open.time.0" value="46" />
           <entry key="project.open.time.1" value="24" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.5" value="22" />
           <entry key="project.open.time.6" value="9" />
           <entry key="project.open.time.7" value="5" />
-          <entry key="project.opened" value="107" />
+          <entry key="project.opened" value="108" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -79,7 +71,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
+            <state relative-caret-position="1782">
               <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
               <folding>
                 <element signature="e#16#32#0" expanded="true" />
@@ -88,23 +80,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/processing/Readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="414">
-                <caret line="66" column="47" lean-forward="true" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
+                <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gnn/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+            <state relative-caret-position="451">
+              <caret line="169" column="80" lean-forward="true" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="80" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -115,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3212">
+            <state relative-caret-position="3124">
               <caret line="146" column="14" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="14" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -136,7 +128,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/processing/gen_adj.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
+            <state relative-caret-position="1408">
               <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
@@ -148,7 +140,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/processing/gen_feat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
+            <state relative-caret-position="1826">
               <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -210,10 +202,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="349" />
+    <option name="y" value="70" />
     <option name="width" value="1440" />
-    <option name="height" value="812" />
+    <option name="height" value="813" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -375,10 +368,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="812" extended-state="6" />
+    <frame x="0" y="25" width="1440" height="813" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14520743" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14735337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -511,25 +504,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/processing/data_example/A.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-548569" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processing/data_example/PA.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processing/data_example/P.label.all">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processing/data_example/P.label.part">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/processing/data_example/A.txt" />
+    <entry file="file://$PROJECT_DIR$/processing/data_example/PA.txt" />
+    <entry file="file://$PROJECT_DIR$/processing/data_example/P.label.all" />
+    <entry file="file://$PROJECT_DIR$/processing/data_example/P.label.part" />
     <entry file="file://$PROJECT_DIR$/processing/P.label.part" />
     <entry file="file://$PROJECT_DIR$/processing/P.label.all" />
+    <entry file="file://$PROJECT_DIR$/processing/data_example/P.txt" />
     <entry file="file://$PROJECT_DIR$/gnn/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
+        <state relative-caret-position="1782">
           <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
           <folding>
             <element signature="e#16#32#0" expanded="true" />
@@ -537,28 +521,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gnn/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gnn/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3212">
+        <state relative-caret-position="3124">
           <caret line="146" column="14" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="14" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processing/data_example/P.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/gnn/metrics.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -569,7 +540,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/processing/gen_adj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
+        <state relative-caret-position="1408">
           <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -579,7 +550,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/processing/gen_feat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="1826">
           <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -592,9 +563,19 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="414">
-            <caret line="66" column="47" lean-forward="true" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
+            <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gnn/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="169" column="80" lean-forward="true" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
