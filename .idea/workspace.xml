@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b8e0dcdf-48a9-424e-bdbc-cc513c8e7d14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/A.feat.npz" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,15 +20,15 @@
     <session id="-1439225653">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="108" />
+          <entry key="project.closed" value="110" />
           <entry key="project.open.time.0" value="46" />
-          <entry key="project.open.time.1" value="24" />
+          <entry key="project.open.time.1" value="26" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.5" value="22" />
           <entry key="project.open.time.6" value="9" />
           <entry key="project.open.time.7" value="5" />
-          <entry key="project.opened" value="108" />
+          <entry key="project.opened" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -35,6 +36,7 @@
           <entry key="all" value="17" />
           <entry key="config" value="12" />
           <entry key="md" value="1" />
+          <entry key="npz" value="1" />
           <entry key="out" value="1" />
           <entry key="part" value="22" />
           <entry key="py" value="36" />
@@ -45,7 +47,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="67" />
+          <entry key="PLAIN_TEXT" value="68" />
           <entry key="Python" value="36" />
         </counts>
       </usages-collector>
@@ -68,10 +70,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gnn/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1782">
+            <state relative-caret-position="22">
               <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
               <folding>
                 <element signature="e#16#32#0" expanded="true" />
@@ -84,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/processing/Readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="414">
+              <first_editor relative-caret-position="1452">
                 <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
               </first_editor>
               <second_editor />
@@ -92,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="169" column="80" lean-forward="true" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="80" />
+            <state relative-caret-position="3718">
+              <caret line="169" column="80" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="80" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -107,7 +109,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gnn/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3124">
+            <state relative-caret-position="3212">
               <caret line="146" column="14" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="14" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -128,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/processing/gen_adj.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1408">
-              <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+            <state relative-caret-position="1452">
+              <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -140,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/processing/gen_feat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1826">
-              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="1892">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <marker date="1605061562510" expanded="true" signature="265:406" ph="..." />
@@ -202,9 +204,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="349" />
-    <option name="y" value="70" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="227" />
+    <option name="y" value="46" />
     <option name="width" value="1440" />
     <option name="height" value="813" />
   </component>
@@ -213,7 +215,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,12 +230,6 @@
             <path>
               <item name="HGCN" type="b2602c69:ProjectViewProjectNode" />
               <item name="HGCN" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="net_cora" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HGCN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HGCN" type="462c0819:PsiDirectoryNode" />
               <item name="gnn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -246,6 +241,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,6 +253,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/processing/data_example" />
       <recent name="$PROJECT_DIR$/processing" />
       <recent name="$PROJECT_DIR$/config" />
@@ -369,9 +366,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="813" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14735337" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15164521" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -511,9 +507,12 @@
     <entry file="file://$PROJECT_DIR$/processing/P.label.part" />
     <entry file="file://$PROJECT_DIR$/processing/P.label.all" />
     <entry file="file://$PROJECT_DIR$/processing/data_example/P.txt" />
+    <entry file="file://$PROJECT_DIR$/data/A.feat.npz">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/gnn/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
+        <state relative-caret-position="22">
           <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
           <folding>
             <element signature="e#16#32#0" expanded="true" />
@@ -521,9 +520,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/processing/Readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1452">
+            <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gnn/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3718">
+          <caret line="169" column="80" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gnn/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3124">
+        <state relative-caret-position="3212">
           <caret line="146" column="14" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="14" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -540,8 +559,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/processing/gen_adj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+        <state relative-caret-position="1452">
+          <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -550,31 +569,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/processing/gen_feat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1826">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="1892">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <marker date="1605061562510" expanded="true" signature="265:406" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processing/Readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="414">
-            <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gnn/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="169" column="80" lean-forward="true" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
