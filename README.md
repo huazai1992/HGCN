@@ -28,3 +28,6 @@ If you want to train HGCN on your own dataset, you should prepare the following 
 - *.feat.label.npz: The one-hot codes of the labels of target-type nodes. Note that, 0 to initialize the features of nontarget-type nodes.
 - *.label.all: The labels of all target-type nodes. Each line contains one token `<label>`.
 - *.label.part: the target-type nodes that have the labels, and their labels. Each line contains two token `<node> <label>`.
+
+## Citation
+Zhihua Zhu, Xinxin Fan, Xiaokai Chu, Jingping Bi. HGCN: A Heterogeneous Graph Convolutional Network-Based Deep Learning Model Toward Collective Classification. The 26th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 1161-1171, 2020.
